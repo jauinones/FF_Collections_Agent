@@ -13,7 +13,7 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-const uri = `mongodb+srv://${process.env.MONGODB_USER}:${process.env.MONGODB_PASSWORD}@bedrockdev.j1dmahl.mongodb.net/test`;
+const uri = `mongodb+srv://${process.env.MONGODB_USER}:${process.env.MONGODB_PASSWORD}@cluster0.6hv3xgs.mongodb.net/ff-collections-agent?retryWrites=true&w=majority&appName=Cluster0`;
 const clientDB = new MongoClient(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
