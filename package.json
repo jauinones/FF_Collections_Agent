@@ -1,0 +1,23 @@
+{
+  "name": "twilio-chatgpt-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon main.js"
+  },
+  "keywords": [],
+  "author": "rafi",
+  "license": "ProLeads Marketing LLC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongodb": "^6.5.0",
+    "mongoose": "^8.3.3",
+    "nodemon": "^3.1.0",
+    "openai": "^4.40.0",
+    "twilio": "^5.0.4"
+  }
+}
