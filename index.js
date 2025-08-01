@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 
-const uri = `mongodb+srv://${process.env.MONGODB_USER}:${process.env.MONGODB_PASSWORD}@cluster0.6hv3xgs.mongodb.net/`;
+const uri = `mongodb+srv://${process.env.MONGODB_USER}:${process.env.MONGODB_PASSWORD}@cluster0.6hv3xgs.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
 const clientDB = new MongoClient(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
