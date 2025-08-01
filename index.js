@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 
-const uri = `mongodb+srv://${process.env.MONGODB_USER}:${process.env.MONGODB_PASSWORD}@bedrockdev.j1dmahl.mongodb.net/test`;
+const uri = `mongodb+srv://jaquinones:uIGpOZjKb3xvEhST@cluster0.6hv3xgs.mongodb.net/`;
 const clientDB = new MongoClient(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -29,10 +29,10 @@ let replyText;
 
 async function connectToDB() {
     await clientDB.connect();
-    const db = clientDB.db("HRMAI");
-    faqCollection = db.collection("Knowledge_Base");
-    ticketsCollection = db.collection("Front_End_Tickets");
-    archivesCollection = db.collection("Front_End_Archives");
+    const db = clientDB.db("ff-collections-agent");
+    faqCollection = db.collection("FF");
+    ticketsCollection = db.collection("FF_Front_End_Tickets");
+    archivesCollection = db.collection("FF_Front_End_Archives");
     await faqCollection.createIndex({ keywords: 'text', question: 'text', answer: 'text' });
 }
 
@@ -41,7 +41,7 @@ connectToDB().catch(console.error);
 
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
-const twilioNumber = '+19512618044';
+const twilioNumber = '+19519042811';
 const twilioClient = new Twilio(accountSid, authToken);
 
 
