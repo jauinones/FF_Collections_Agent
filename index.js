@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 
-const uri = `mongodb+srv://jaquinones:uIGpOZjKb3xvEhST@cluster0.6hv3xgs.mongodb.net/`;
+const uri = `mongodb+srv://ff_collections_user:eHRLsPXEQudb3gxq@cluster0.6hv3xgs.mongodb.net/`;
 const clientDB = new MongoClient(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
